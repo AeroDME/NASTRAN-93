@@ -374,7 +374,11 @@ C     J  = J - 1
       INFLAG = INFLAG + 1        
       IF (IBMCDC.EQ.0) OPEN(UNIT=INFLAG,FILE=A8(1),STATUS='OLD',ERR=470)
       IF (IBMCDC.NE.0) OPEN(UNIT=INFLAG,FILE=A48  ,STATUS='OLD',ERR=470,
-     1                      READONLY)        
+CDE   D. Everhart
+CDE   07 JAN 2017
+CDE  1                      READONLY)        
+     1              ACTION='READ')        
+CDE
 C        
 C     VAX - THE PARAMETER  'READONLY' IS NEEDED IF FILE PROTECTION IS   
 C           SET FOR READ (=R) ONLY.        

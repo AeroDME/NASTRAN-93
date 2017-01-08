@@ -764,7 +764,8 @@ C
       LASTID = IOUT(1)        
       FMT(2) = IH0        
       LINE   = LINE + 2        
- 1330 CALL OFPPNT (IOUT,IOUT,NWDS,FMT,IFMT,METHD)        
+CWKBR 1330 CALL OFPPNT (IOUT,IOUT,NWDS,FMT,IFMT,METHD)        
+ 1330 CALL OFPPNT (IOUT,NWDS,FMT)        
       GO TO 1700        
 C        
 C     ELEMENT FORCES IN HEAT PROBLEMS        

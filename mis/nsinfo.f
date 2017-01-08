@@ -65,7 +65,11 @@ C
       IF (N .EQ.  0) STOP ' N=0 IN NSINFO'        
       IF (N .LT.  0) OPEN (UNIT=LU,FILE=NAS14(-N),STATUS='OLD',ERR=280) 
       IF (N .GT.  0) OPEN (UNIT=LU,FILE=NASINF(N),STATUS='OLD',ERR=280  
-     1                    ,SHARED,READONLY)     ! <== VAX        
+CDE   D. Everhart
+CDE   07 JAN 2017
+CDE  1                    ,SHARED,READONLY)     ! <== VAX        
+     1                    ,ACCESS='READ'  )     ! <== VAX        
+CDE
 C        
 C     SEARCH FOR FIRST EQUAL-LINE        
 C        

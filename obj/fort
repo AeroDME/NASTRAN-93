@@ -1,3 +1,0 @@
-#!/bin/csh
-f77 -c -static -G 0 $1.f
-exit 0

@@ -121,9 +121,14 @@ C     IF (MACH .EQ IBM) CALL FILEDEF (PTAPE,RECFM,FB(MA))
      1      STATUS = 'OLD',        
      2      FORM   = 'FORMATTED',        
      3      ACCESS = 'SEQUENTIAL',        
-     4      IOSTAT = J,        
-     5      CARRIAGECONTROL = NONE        
-     6      ,RECL  = IRECSZ)        
+     4      IOSTAT = J        
+CDE   D. Everhart
+CDE   07 JAN 2017
+CDE   This is done in the NASTRAN-95 version by CHP
+CDE  5      ,CARRIAGECONTROL = NONE        
+CDE  6      ,RECL  = IRECSZ
+     6     )        
+CDE
 C            RECL IS NEEDED BY VAX, AND POSSIBLY OTHER MACHINES)        
 C    6      )        
       IF (J .NE. 0) GO TO 60        
@@ -137,9 +142,14 @@ C
      1      STATUS = 'NEW',        
      2      FORM   = 'FORMATTED',        
      3      ACCESS = 'SEQUENTIAL',        
-     4      IOSTAT = J,        
-     5      CARRIAGECONTROL = NONE        
-     6      ,RECL  = IRECSZ)        
+     4      IOSTAT = J        
+CDE   D. Everhart
+CDE   07 JAN 2017
+CDE   This is done in the NASTRAN-95 version by CHP
+CDE  5      ,CARRIAGECONTROL = NONE        
+CDE  6      ,RECL  = IRECSZ        
+     6     )        
+CDE
 C            RECL IS NEEDED BY VAX, AND POSSIBLY OTHER MACHINES)        
 C    6      )        
       IF (J .EQ. 0) GO TO 80        

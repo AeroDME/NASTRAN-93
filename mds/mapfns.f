@@ -28,7 +28,12 @@ C
       ENTRY LOCFX (I)        
 C     ===============        
       K = LQRO/1000        
-      LOCFX = %LOC(I)/K        
+CDE   D. Everhart
+CDE   07 JAN 2017
+CDE   LOCFX = %LOC(I)/K        
+CDE   Updated intrinsic name for GFORTRAN.
+      LOCFX = LOC(I)/K        
+CDE   
       RETURN        
 C        
       ENTRY LSHIFT (I,J)        

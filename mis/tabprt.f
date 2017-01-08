@@ -180,7 +180,7 @@ C
       IF (NRED .EQ. 1) GO TO 165        
 C     IF (MACH .EQ. 3) GO TO 162        
 C 161 CONTINUE        
-      WRITE (OTPE,ICORE,ERR=164) (CORE(I),I=NS,NP)        
+CWKBD WRITE (OTPE,ICORE,ERR=164) (CORE(I),I=NS,NP)        
 C     GO TO 164        
 C        
 C     UNIVAC ONLY        
@@ -192,6 +192,8 @@ C     THEREFORE REMOVED FROM NASTRAN SOURCE CODE)
 C        
 C 162 CALL WRTFMT (ICORE(NS),NP-NS+1,CORE)        
 C        
+CWKBI
+  162 CALL WRTFMT (ICORE(NS),NP-NS+1,CORE)        
   164 CONTINUE        
       LLEN = 0        
       NRED = 1        
@@ -208,7 +210,8 @@ C
 C        
 C     GO TO 161 IS LOGICALLY UNSOUND. CHANG TO 164. (G.CHAN/UNISYS 1/93)
 C     GO TO 161        
-      GO TO 164        
+CWKBR GO TO 164        
+      GO TO 162
 C        
   170 CALL CLOSE (INAME,1)        
       CALL PAGE2 (-2)        
