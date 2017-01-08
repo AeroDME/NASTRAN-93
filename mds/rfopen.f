@@ -78,7 +78,11 @@ CWKBI
 CWKBR IF (J .EQ. 6) OPEN (UNIT=IN,FILE=MB6,ACCESS='SEQUENTIAL',ERR=100, 
       OPEN (UNIT=IN,FILE=DSN,ACCESS='SEQUENTIAL',ERR=100, 
      1                    FORM='FORMATTED',STATUS='OLD'        
-     2                   ,SHARED,READONLY)
+CDE   D. Everhart
+CDE   07 JAN 2017
+CDE  2                   ,SHARED,READONLY)
+     1             ,ACTION='READ')        
+CDE
       GO TO 80        
 C        
 C     OTHERS -        

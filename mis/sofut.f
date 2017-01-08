@@ -7,6 +7,12 @@ C
 C     SOFUT     //V,N,DRY/C,N,NAME1/C,N,OPER/C,N,OPT/C,N,NAME2/        
 C                 C,N,PREFX/C,N,IA/C,N,IB/C,N,IC/C,N,ID/C,N,IE $        
 C        
+CDE   07 JAN 2017
+CDE   D. Everhart
+CDE   This function collides with a GFORTRAN intrinsic, and needs
+CDE   to be declared.
+      EXTERNAL        RENAME
+CDE 
       LOGICAL         DITUP        
       INTEGER         DRY,OPER,OPT,PREFX,SYSBUF,DELE,RENAM,NAME(2)      
       CHARACTER       UFM*23,UWM*25        

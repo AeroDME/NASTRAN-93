@@ -38,7 +38,10 @@ CWKBI
      1      STATUS = 'UNKNOWN',        
      2      FORM   = 'UNFORMATTED',        
      3      ACCESS = 'DIRECT',        
-     4      MAXREC = FILSIZ(I),        
+CDE   D. Everhart
+CDE   07 JAN 2017
+CDE  4      MAXREC = FILSIZ(I),        
+CDE
      5      RECL   = IBKSZ)        
 C    6      RECORDTYPE = 'FIXED',        
 C    7      BLOCKSIZE  = IBKSZ,        

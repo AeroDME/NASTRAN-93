@@ -962,11 +962,11 @@ C
       NAME = 'PLOADX'        
       GO TO 100        
 C        
-      ENTRY ERRTRC (NAM)        
+CDE   ENTRY ERRTRC (NAM)        
 C     ==================        
 C     ERROR TRACEBACK        
 C        
-      GO TO 220        
+CDE   GO TO 220        
 C        
   100 WRITE  (NOUT,150) NAME        
   150 FORMAT ('0*** SYSTEM FATAL ERROR  ---  JOB TERMINATED',        

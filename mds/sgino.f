@@ -122,8 +122,12 @@ C     IF (MACH .EQ IBM) CALL FILEDEF (PTAPE,RECFM,FB(MA))
      2      FORM   = 'FORMATTED',        
      3      ACCESS = 'SEQUENTIAL',        
      4      IOSTAT = J,        
-     5      CARRIAGECONTROL = NONE        
-     6      ,RECL  = IRECSZ)        
+CDE   D. Everhart
+CDE   07 JAN 2017
+CDE  5      CARRIAGECONTROL = NONE        
+CDE  6      ,RECL  = IRECSZ)        
+     6      RECL  = IRECSZ)        
+CDE
 C            RECL IS NEEDED BY VAX, AND POSSIBLY OTHER MACHINES)        
 C    6      )        
       IF (J .NE. 0) GO TO 60        
@@ -138,8 +142,12 @@ C
      2      FORM   = 'FORMATTED',        
      3      ACCESS = 'SEQUENTIAL',        
      4      IOSTAT = J,        
-     5      CARRIAGECONTROL = NONE        
-     6      ,RECL  = IRECSZ)        
+CDE   D. Everhart
+CDE   07 JAN 2017
+CDE  5      CARRIAGECONTROL = NONE        
+CDE  6      ,RECL  = IRECSZ)        
+     6      RECL  = IRECSZ)        
+CDE
 C            RECL IS NEEDED BY VAX, AND POSSIBLY OTHER MACHINES)        
 C    6      )        
       IF (J .EQ. 0) GO TO 80        

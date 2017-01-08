@@ -218,8 +218,6 @@ C
       IF (INDEX+1 .GT. RL) GO TO 400        
       SP(1) = Z(INDEX  )        
       SP(2) = Z(INDEX+1)        
-CWKBI
-      IF ( SP(2) .EQ. 0.0 ) DP(1) = SP(1)
       RSP = SNGL(DP(1))        
       K = NUMTYP(RSP)+1        
       IF (K.EQ.2 .OR. K.EQ.4) GO TO 400        
@@ -290,10 +288,7 @@ C
       IF (J.EQ.2 .OR. J.EQ.4) GO TO 590        
       GO TO 570        
   560 IF (PREC .EQ. 1) DP(1) = DBLE(Z(INDEX))        
-CWKBI
-  570 IF ( SP(2) .EQ. 0.0 ) DP(1) = SP(1)
-CWKBR  570 RDP = DP(1)        
-      RDP = DP(1)
+  570 RDP = DP(1)        
       VPS(IL6  ) = SP(1)        
       VPS(IL6+1) = SP(2)        
       IF (PRT) WRITE (NOUT,580) RDP,NMVPS        

@@ -1,5 +1,11 @@
       SUBROUTINE PEXIT        
 C        
+CDE   07 JAN 2017
+CDE   D. Everhart
+CDE   This function collides with a GFORTRAN intrinsic, and needs
+CDE   to be declared.
+      EXTERNAL        LINK
+CDE 
       INTEGER         HH,SS,DATE(3)        
       COMMON /OUTPUT/ LE(17)        
       COMMON /MACHIN/ MACH        

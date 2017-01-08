@@ -111,7 +111,7 @@ C
 C        
 C     HICORE  =   NUMBER RELATED TO CORE        
 C        
-     6       -1, 50000, 85000,    -1, 50000, 50000, 99999, 50000, 50000,
+     6       -1, 50000, 85000,    -1, 50000,400000, 99999, 50000, 50000,
      7    50000, 50000,500000, 80000, 99999, 99999, 50000, 50000, 50000,
      8    50000, 50000, 50000, 50000/        
 C        
@@ -216,7 +216,8 @@ C
 C        
 C     DEFINE COMMON /SYSTEM/ MACHINE-DEPENDENT CONSTANTS        
 C        
-  100 SYSBUF = MCONST(MACH)        
+  100 MACH = 6
+      SYSBUF = MCONST(MACH)        
       IBMCDC = 1        
       IF (MACH.EQ.2 .OR. MACH.EQ.4) IBMCDC = 0        
 C        
